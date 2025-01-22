@@ -15,7 +15,7 @@ Network Security Groups are a set of defined rules that control the traffic to a
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines)
-- Remote Desktop (if using Mac, download Windows App, previously known as Remote Desktop)
+- [Windows App](https://apps.apple.com/us/app/windows-app/id1295203466?mt=12) or Remote Desktop
 - Wireshark (Note that this will be downloaded to the Windows VM, not your physical computer)
 - Various Command-Line Tools
 - Various Network Protocols (SSH, RDH, DNS, HTTP/S, ICMP)
@@ -30,7 +30,19 @@ Create two virtual machines on the same virtual network. One will use a Windows 
 
 1. Log in to the Azure portal
 2. Create a Resource Group to add the virtual machines to. This will help us keep our resources organized
-3. Create a Windows 10 virtual machine
+3. Create a Windows 10 virtual machine. Note: Select "password" as authentication type for both VMs, we will use these credentials to authenticate ourselves later.
 4. Create a Linux (Ubuntu) virtual machine. Ensure that this VM is on the same virtual network as your windows VM
 
+<h2>Download and Install Wireshark</h2>
 
+1. Open up the Windows App and click on the "+" at the top right of the window to add a PC
+  <img src="https://i.imgur.com/q2CIjtQ.png" height="80%" width="80%" alt="interface for adding a PC on the Windows App"/>
+2. Paste your Windows VM's public IP address for "PC name". Feel free to give your VM whatever friendly name you would like. I named mine windows-vm so that I can easily know what OS that PC is running. Then click "Add" to add the VM
+  <img src="https://i.imgur.com/cvBmV30.png" height="80%" width="80% alt=""/>
+3. Click on the ellipsis and select "connect" to connect to the VM
+   <img src="https://i.imgur.com/OKSJhL1.png" height="80%" width="80%  alt=""/>
+4. Add the username and password you created when you created your virtual machine to authenticate yourself
+  <img src="https://i.imgur.com/dkhuqJB.png" height="80%" width="80%  alt=""/>
+5. Download and install [Wireshark](https://www.wireshark.org/) within your Windows 10 VM
+
+<h2>Observe ICMP Traffic</h2>
