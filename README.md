@@ -9,7 +9,7 @@ In this tutorial we will use Wireshark to observe various network traffic betwee
 <h2>What Is Wireshark?</h2>
 Wireshark is a software tool used to capture and amalyze data packets that are transmitted over a network.
 
-<h2>What Are Network Security Groups</h2>
+<h2>What Are Network Security Groups?</h2>
 Network Security Groups are a set of defined rules that control the traffic to and from Azure resources. In our case, the resources are Azure virtual machines. So our network security group will use rules to determine if traffic should be allowed or denied, acting like a virtual firewall for our virtual machines.
 
 <h2>Environments and Technologies Used</h2>
