@@ -22,5 +22,13 @@ Network Security Groups are a set of defined rules that control the traffic to a
 
 <h2>Operating Systems Used</h2>
 
-- Windows 10 (21H2)
-- Ubuntu Serve 20.04
+- Windows 10 (22H2)
+- Ubuntu Serve 22.04
+
+<h2>Create Virtual Machines</h2>
+Create two virtual machines on the same network. One will use a Windows 10 image and the other will use an Ubuntu Server 22.04 image. 
+
+1. Log in to the Azure portal
+2. Create a Resource Group to add the virtual machines to. This will help us keep our resources organized
+3. Create a Windows 10 virtual machine
+4. Create a Linux virtual machine. Ensure that this vm is on the same network as your windows vm
