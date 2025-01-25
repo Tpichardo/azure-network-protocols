@@ -35,14 +35,17 @@ Create two virtual machines on the same virtual network. One will use a Windows 
 
 <h2>Download and Install Wireshark</h2>
 
-1. Open up the Windows App and click on the "+" at the top right of the window to add a PC
+1. Open the Windows App and click on the <b>+</b> at the top right of the window to add a PC
   <img src="https://i.imgur.com/q2CIjtQ.png" height="80%" width="80%" alt="interface for adding a PC on the Windows App"/>
 2. Paste your Windows VM's public IP address for "PC name". Feel free to give your VM whatever friendly name you would like. I named mine windows-vm so that I can easily know what OS that PC is running. Then click "Add" to add the VM
   <img src="https://i.imgur.com/cvBmV30.png" height="80%" width="80% alt=""/>
-3. Click on the ellipsis and select "connect" to connect to the VM
+3. Click on the ellipsis and select <b>connect</b> to connect to the VM
    <img src="https://i.imgur.com/OKSJhL1.png" height="80%" width="80%  alt=""/>
 4. Add the username and password you created when you created your virtual machine to authenticate yourself
   <img src="https://i.imgur.com/dkhuqJB.png" height="80%" width="80%  alt=""/>
-5. Download and install [Wireshark](https://www.wireshark.org/) within your Windows 10 VM
+5. Download and install [Wireshark](https://www.wireshark.org/) within your Windows 10 VM. Choose the Windows x64 Installer
 
 <h2>Observe ICMP Traffic</h2>
+
+1. In Wireshark, select <b>ethernet</b> and then select the shark fin on the top left corner of the window so begin viewing the network activity
+2. 
