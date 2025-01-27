@@ -36,14 +36,14 @@ Create two virtual machines on the same virtual network. One will use a Windows 
 <h2>Download and Install Wireshark</h2>
 
 1. Open the Windows App and click on the <b>+</b> at the top right of the window to add a PC.
-  <img src="https://i.imgur.com/q2CIjtQ.png" height="80%" width="80%" alt="interface for adding a PC on the Windows App"/>
+   <img src="https://i.imgur.com/q2CIjtQ.png" height="80%" width="80%" alt="interface for adding a PC on the Windows App"/>
 2. Paste your Windows VM's public IP address for <b>PC name</b>. Feel free to give your VM whatever friendly name you would like. I named mine windows-vm so that I can easily know what operating system is running on the PC. Then click <b>Add</b> to add the VM.
-  <img src="https://i.imgur.com/cvBmV30.png" height="80%" width="80% alt=""/>
+      <img src="https://i.imgur.com/cvBmV30.png" height="80%" width="80%" alt="interface for adding a PC on the Windows App"/>
 3. Click on the ellipsis and select <b>connect</b> to connect to the Windows VM.
-   <img src="https://i.imgur.com/OKSJhL1.png" height="80%" width="80%  alt=""/>
+   <img src="https://i.imgur.com/OKSJhL1.png" height="80%" width="80%" alt="interface for adding a PC on the Windows App"/>
 4. Add the username and password you created when you created your virtual machine in Azure to authenticate yourself.
-  <img src="https://i.imgur.com/dkhuqJB.png" height="80%" width="80%  alt=""/>
-5. Once connected, lets download and install [Wireshark](https://www.wireshark.org/) within your Windows VM. Choose the Windows x64 Installer.
+    <img src="https://i.imgur.com/dkhuqJB.png" height="80%" width="80%" alt="interface for adding a PC on the Windows App"/>
+5. Once connected, open the browser within your Windows VM to download and install [Wireshark](https://www.wireshark.org/). Choose the <b>Windows x64 Installer</b>.
 
 <h2>Observe ICMP Traffic</h2>
 
