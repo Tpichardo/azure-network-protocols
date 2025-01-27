@@ -47,5 +47,7 @@ Create two virtual machines on the same virtual network. One will use a Windows 
 
 <h2>Observe ICMP Traffic</h2>
 
-1. In Wireshark, select <b>ethernet</b> and then select the shark fin on the top left corner of the window so begin viewing the network activity
-2. 
+1. In Wireshark, select <b>ethernet</b> and then select the blue shark fin on the top left corner of the window to begin viewing the network traffic
+2. Type `icmp` on the bar at the top to filter for ICMP traffic only. ICMP, or Internet Control Message Protocol operates on layer 3 of the OSI model and is used to relays information about network issues. Ping is a tool that uses ICMP to test connectivity between two devices by sending an echo request and waiting for an echo reply. It's like one computer asks "Hey, are you there?" and the other responds with "Yes, I'm here."
+3. Open Power Shell to ping the linux VM. Let's ping the Linux VM's private IP address instead of the public IP address to improve security and efficiency: `ping 10.0.0.5`
+4. Now we can see the packets that were sent across the network when we pinged the Linux PC and idividually examine each one
