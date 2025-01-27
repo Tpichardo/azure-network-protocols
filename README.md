@@ -51,3 +51,5 @@ Create two virtual machines on the same virtual network. One will use a Windows 
 2. Type `icmp` on the bar at the top to filter for ICMP traffic only. ICMP, or Internet Control Message Protocol operates on layer 3 of the OSI model and is used to relay information about network issues. Ping is a tool that uses ICMP to test connectivity between two devices by sending an echo request and waiting for an echo reply. It's like one computer asks "Hey, are you there?" and the other responds with "Yes, I'm here."
 3. Open Power Shell on the Windows VM to ping the linux VM. Let's ping the Linux VM's private IP address instead of the public IP address to improve security and efficiency: `ping 10.0.0.5`
 4. Now we can see the packets that were sent across the network when we pinged the Linux PC and idividually examine each one
+
+<h2>Experiment with Network Security Groups</h2>
