@@ -57,4 +57,5 @@ Pertually ping the Linux VM, and use NSGs to deny ICMP traffic to the Linux VM
 
 1. Let's perpetually ping the Linux VM with `ping 10.0.0.5 -t`. This will send a continuous ping to the Linux VM until we decide to stop it.
 2. In your Azure portal, go to the Linux VM's network security group, and set a rule to deny ICMP traffic. Once this is done, our echo request will begin to time out as we will stop receiving echo replies from the Linux VM. You can also see this by observing the ICMP traffic on Wireshark. Notice that there are no longer any replies from the Linux VM, only requests.
-3. To allow ICMP traffic, just delete the rule and the Linux VM will eventually begin seding echo replies.
+3. To allow ICMP traffic, just delete the rule on the NSG and the Linux VM will eventually begin seding echo replies.
+4. Stop the perpetual pings with <b>CTRL + C</b>
