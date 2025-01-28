@@ -54,33 +54,39 @@ Ping the Linux VM:
 2. Type `icmp` on the bar at the top to filter for ICMP traffic only. ICMP, or Internet Control Message Protocol operates on layer 3 of the OSI model and is used to relay information about network issues. Ping is a tool that uses ICMP to test connectivity between two devices by sending an echo request and waiting for an echo reply. It's like one computer asks "Hey, are you there?" and the other responds with "Yes, I'm here."
 
     <img src="https://i.imgur.com/5VmhUAp.png" height="80%" width="80%" alt=""/>
-4. Open Power Shell on the Windows VM to ping the linux VM. Let's ping the Linux VM's private IP address instead of the public IP address for improved security and efficiency: `ping 10.0.0.5`.
+3. Open Power Shell on the Windows VM to ping the linux VM. Let's ping the Linux VM's private IP address instead of the public IP address for improved security and efficiency: `ping 10.0.0.5`.
     <img src="https://i.imgur.com/LBHFZtz.png" height="80%" width="80%" alt=""/>
-5. Now we can see the packets that were sent across the network when we pinged the Linux PC and idividually examine each one.
+4. Now we can see the packets that were sent across the network when we pinged the Linux PC and idividually examine each one.
 
 <h2>Experiment with Network Security Groups</h2>
 Pertually ping the Linux VM, and use NSGs to deny ICMP traffic to the Linux VM:
 
 1. Let's perpetually ping the Linux VM with `ping -t 10.0.0.5`. This will send a continuous ping to the Linux VM until we decide to stop it.
-3. In your Azure portal, go to the Linux VM's network security group, and set a rule to deny ICMP traffic. Once this is done, our echo request will begin to time out as we will stop receiving echo replies from the Linux VM. You can also see this by observing the ICMP traffic on Wireshark.
+2. In your Azure portal, go to the Linux VM's network security group, and set a rule to deny ICMP traffic. Once this is done, our echo request will begin to time out as we will stop receiving echo replies from the Linux VM. You can also see this by observing the ICMP traffic on Wireshark.
 
    <img src="https://i.imgur.com/mOaDU5w.png" height="80%" width="80%" alt=""/>
    <img src="https://i.imgur.com/JfPk36p.png" height="80%" width="80%" alt=""/><br>
    
    Notice how there are no longer any replies from the Linux VM, only requests.
    <img src="https://i.imgur.com/gS5yukg.png" height="80%" width="80%" alt=""/>
-5. To allow ICMP traffic, just delete the rule on the NSG and the Linux VM will eventually begin sending echo replies.
+3. To allow ICMP traffic, just delete the rule on the NSG and the Linux VM will eventually begin sending echo replies.
    <img src="https://i.imgur.com/on8Q7gP.png" height="80%" width="80%" alt=""/>
-7. Stop the perpetual pings with <b>CTRL + C</b>
+4. Stop the perpetual pings with <b>CTRL + C</b>
 
 <h2>Observe SSH Traffic</h2>
-Establish a secure remote connection to the Linux VM using the Windows VM to log in through SSH:
+Use the Windows VM to establish a secure remote connection to the Linux VM through SSH:
 
-1. Filter for SSH traffic in Wireshark. SSH or Secure Shell is a network protocol that allows users to securely access a computer over an unsecured network
+1. Filter for SSH traffic in Wireshark. SSH or Secure Shell is a network protocol that allows users to securely access a computer over an unsecured network.
 2. In PowerShell, type `ssh <username>@<private IP>` to connect. For example, I would type: `ssh labuser@10.0.0.5`. We can see that Wireshark immediately starts to display SSH traffic.
+   <img src="https://i.imgur.com/OlM6dgk.png" height="80%" width="80%" alt=""/>
 3. After authenticating with the credentials created for the Linux VM, you’ll have access to your VM as if it were physically in front of you. However, this access is limited to the command line. This means you can create and delete files, run programs, and manage the system, but only through plain text commands—no Graphical User Interface (GUI).
-4. We can see that we are actually connected to our Linux VM because our prompt has changed. We can also verify our connection by typing `hostname` on the command prompt. This should return the name that you gave to your Linux VM when you created it on Azure.
-5. To exit the SSH connection just type `exit`. Notice how our command prompt has changed, and typing `hostname` now returns the name of our Windows VM.
+4. We can see that we are actually connected to our Linux VM because our prompt has changed to `<username@linux-vm-name>`.<br>
+    <img src="https://i.imgur.com/7my6yHc.png" height="80%" width="80%" alt=""/>
+    
+    We can also verify our connection by typing `hostname` on the command prompt. This should return the name that you gave to your Linux VM when you created it on Azure.<br>
+    <img src="https://i.imgur.com/ShhGSkL.png" height="80%" width="80%" alt=""/>
+5. To exit the SSH connection just type `exit`. Notice how our command prompt has changed, and typing `hostname` now returns the name of your Windows VM. <br>
+    <img src="https://i.imgur.com/zFElRs0.png" height="80%" width="80%" alt=""/>
 
 <h2>Observe DHCP Traffic</h2>
 Release our Windows VM's IP address and request a new one from the DHCP server:
