@@ -30,7 +30,7 @@ Create two virtual machines on the same virtual network. One will use a Windows 
 
 1. Log in to the Azure portal.
 2. Create a Resource Group to add the virtual machines to. This will help us keep our resources organized.
-3. Create a Windows 10 virtual machine. Select <b>password</b> for authentication type for both VMs. Save these credentials, as we will use them to authenticate ourselves later.
+3. Create a Windows 10 virtual machine. Select <b>password</b> for authentication type for both VMs. Save these credentials, as we will use them for authenticating later.
 4. Create a Linux (Ubuntu) virtual machine. Ensure that this VM is on the same virtual network as your Windows VM.
 
 <h2>Download and Install Wireshark</h2>
@@ -61,6 +61,14 @@ Pertually ping the Linux VM, and use NSGs to deny ICMP traffic to the Linux VM
 4. Stop the perpetual pings with <b>CTRL + C</b>
 
 <h2>Observe SSH Traffic</h2>
+Establish a secure remote connection to our Linux VM using our Windows VM to log in through SSH
+
+1. Filter for SSH traffic in Wireshark. SSH or Secure Shell is a network protocol that allows users to securely access a computer over an unsecured network
+2. In PowerShell, type `ssh <username>@<private IP>` to connect. For example, I would type: `ssh labuser@10.0.0.5`. We can see that Wireshark immediately starts to display SSH traffic.
+3. After authenticating with the credentials created for the Linux VM, you’ll have access to your VM as if it were physically in front of you. However, this access is limited to the command line. This means you can create and delete files, run programs, and manage the system, but only through plain text commands—no Graphical User Interface (GUI).
+4. We can see that we are actually connected to our Linux VM because our prompt has changed. We can also type `hostname` on the command prompt. This will return the name that you gave to your Linux VM when you created it on Azure.
+5. To exit the SSH connection just type `exit`. Notice how our command prompt has changed, and typing `hostname` now returns the name of our Windows VM.
+
 <h2>Observe DHCP Traffic</h2>
 <h2>Observe DNS Traffic</h2>
 <h2>Observe RDP Traffic</h2>
