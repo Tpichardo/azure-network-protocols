@@ -38,20 +38,22 @@ Create two virtual machines on the same virtual network. One will use a Windows 
 1. Open the Windows App and click on the <b>+</b> at the top right of the window to add a PC.
    <img src="https://i.imgur.com/q2CIjtQ.png" height="80%" width="80%" alt="interface for adding a PC on the Windows App"/>
 2. Paste your Windows VM's public IP address for <b>PC name</b>. Feel free to give your VM whatever friendly name you would like. I named mine windows-vm so that I can easily know what operating system is running on the PC. Then click <b>Add</b> to add the VM.
-      <img src="https://i.imgur.com/cvBmV30.png" height="80%" width="80%" alt="interface for adding a PC on the Windows App"/>
+      <img src="https://i.imgur.com/cvBmV30.png" height="80%" width="80%" alt=""/>
 3. Click on the ellipsis and select <b>connect</b> to connect to the Windows VM.
-   <img src="https://i.imgur.com/OKSJhL1.png" height="80%" width="80%" alt="interface for adding a PC on the Windows App"/>
+   <img src="https://i.imgur.com/OKSJhL1.png" height="80%" width="80%" alt=""/>
 4. Add the username and password you created when you created your virtual machine in Azure to authenticate yourself.
-    <img src="https://i.imgur.com/dkhuqJB.png" height="80%" width="80%" alt="interface for adding a PC on the Windows App"/>
+    <img src="https://i.imgur.com/dkhuqJB.png" height="80%" width="80%" alt=""/>
 5. Once connected, open the browser within your Windows VM to download and install [Wireshark](https://www.wireshark.org/). Choose the <b>Windows x64 Installer</b>.
 
 <h2>Observe ICMP Traffic</h2>
 Ping the Linux VM:
 
-1. In Wireshark, select <b>ethernet</b> and then select the blue shark fin on the top left corner of the window to begin viewing the network traffic
+1. In Wireshark, select <b>ethernet</b>. Then select the blue shark fin on the top left corner of the window to begin viewing the network traffic.
+    <img src="https://i.imgur.com/uuF3IKC.png" height="80%" width="80%" alt=""/>
+    <img src="https://i.imgur.com/uOzA5mF.png" height="80%" width="80%" alt=""/> 
 2. Type `icmp` on the bar at the top to filter for ICMP traffic only. ICMP, or Internet Control Message Protocol operates on layer 3 of the OSI model and is used to relay information about network issues. Ping is a tool that uses ICMP to test connectivity between two devices by sending an echo request and waiting for an echo reply. It's like one computer asks "Hey, are you there?" and the other responds with "Yes, I'm here."
-3. Open Power Shell on the Windows VM to ping the linux VM. Let's ping the Linux VM's private IP address instead of the public IP address to improve security and efficiency: `ping 10.0.0.5`
-4. Now we can see the packets that were sent across the network when we pinged the Linux PC and idividually examine each one
+   
+   <img src="https://i.imgur.com/5VmhUAp.png" height="80%" width="80%" alt=""/>
 
 <h2>Experiment with Network Security Groups</h2>
 Pertually ping the Linux VM, and use NSGs to deny ICMP traffic to the Linux VM:
