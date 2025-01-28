@@ -73,7 +73,7 @@ Establish a secure remote connection to the Linux VM using the Windows VM to log
 <h2>Observe DHCP Traffic</h2>
 Release our Windows VM's IP address and request a new one from the DHCP server:
 
-1. Filter for DHCP traffic on Wireshark. DHCP, or Dynamic Host Configuration Protocol is used to automatically assign IP addresses to devices connected to the network.
+1. Filter for DHCP traffic on Wireshark. DHCP or Dynamic Host Configuration Protocol is used to automatically assign IP addresses to devices connected to the network.
 2. Create a <b>.bat</b> file within the Windows VM to execute multiple commands in a sequence. The file will contain the following commands: `ipconfig /release` and `ipconfig / renew`. The first command will release our IP address, causing us to temporarily loose connection to our VM. The second command will then run, allowing our Windows VM to get an IP address and reestablish our connection to our Windows VM.
 3. Observe the DHCP traffic on Wireshark.
    - We can see the <b>release</b> of our IP address occured.
@@ -82,5 +82,16 @@ Release our Windows VM's IP address and request a new one from the DHCP server:
    - The Windows VM sent a <b>Request</b>, requesting to use the offered IP address.
    - Finally the DHCP server sends an <b>Acknowledgment</b> message to confirm and finalize the IP address assignment.  
 <h2>Observe DNS Traffic</h2>
+Request the IP address for popular sites
+
+1. Filter for DNS traffic on Wireshark. DNS or Domain Name Server is used to map human readable domain names to IP addresses.
+2. Lets request Google's IP address! On Power Shell type `nslookup google.com`. This will return Google's IP address.
+3. Use this IP address to access google via your browser. For security purposes, you won't be able to successfully do this for every website you try to access with the IP address.
+4. Feel free to request the IP addredd for any other site you're interested in viewing by following the command `nslookup www.websitename.com`
+
 <h2>Observe RDP Traffic</h2>
+
 <h2>Delete Resource Group</h2>
+Delete your resources group to avoid accruing heavy charges
+
+1. Go into the Azure portal and delete your resource groups. This will inturn delete both the Windows and Linux VM.
