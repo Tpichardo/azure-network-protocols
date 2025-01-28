@@ -95,6 +95,6 @@ Request the IP address for popular sites
 2. Notice how the traffic on Wireshark is non-stop because we are currently using RDP.
 
 <h2>Delete Resource Group</h2>
-Delete your resources group to avoid accruing heavy charges
+Delete your resource group to avoid accruing heavy charges
 
 1. Go into the Azure portal and delete your resource groups. This will in turn delete both the Windows and Linux VM.
