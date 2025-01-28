@@ -66,7 +66,7 @@ Establish a secure remote connection to our Linux VM using our Windows VM to log
 1. Filter for SSH traffic in Wireshark. SSH or Secure Shell is a network protocol that allows users to securely access a computer over an unsecured network
 2. In PowerShell, type `ssh <username>@<private IP>` to connect. For example, I would type: `ssh labuser@10.0.0.5`. We can see that Wireshark immediately starts to display SSH traffic.
 3. After authenticating with the credentials created for the Linux VM, you’ll have access to your VM as if it were physically in front of you. However, this access is limited to the command line. This means you can create and delete files, run programs, and manage the system, but only through plain text commands—no Graphical User Interface (GUI).
-4. We can see that we are actually connected to our Linux VM because our prompt has changed. We can also type `hostname` on the command prompt. This will return the name that you gave to your Linux VM when you created it on Azure.
+4. We can see that we are actually connected to our Linux VM because our prompt has changed. We can also verify our connection by typing `hostname` on the command prompt. This should return the name that you gave to your Linux VM when you created it on Azure.
 5. To exit the SSH connection just type `exit`. Notice how our command prompt has changed, and typing `hostname` now returns the name of our Windows VM.
 
 <h2>Observe DHCP Traffic</h2>
