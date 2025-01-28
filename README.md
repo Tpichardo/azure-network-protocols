@@ -87,11 +87,12 @@ Request the IP address for popular sites
 1. Filter for DNS traffic on Wireshark. DNS or Domain Name Server is used to map human readable domain names to IP addresses.
 2. Lets request Google's IP address! On Power Shell type `nslookup google.com`. This will return Google's IP address.
 3. Use this IP address to access google via your browser. For security purposes, you won't be able to successfully do this for every website you try to access with the IP address.
-4. Feel free to request the IP addredd for any other site you're interested in viewing by following the command `nslookup www.websitename.com`
+4. Feel free to request the IP addredd for any other site you're interested in by following the command `nslookup <websitename>`
 
 <h2>Observe RDP Traffic</h2>
+
 
 <h2>Delete Resource Group</h2>
 Delete your resources group to avoid accruing heavy charges
 
-1. Go into the Azure portal and delete your resource groups. This will inturn delete both the Windows and Linux VM.
+1. Go into the Azure portal and delete your resource groups. This will in turn delete both the Windows and Linux VM.
