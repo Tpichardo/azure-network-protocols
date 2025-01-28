@@ -79,8 +79,8 @@ Release our Windows VM's IP address and request a new one from the DHCP server:
    - We can see the <b>release</b> of our IP address occured.
    - Then the Windows VM sent a DHCP <b>Discover</b> Message looking for a DHCP server.
    - The DHCP Server then responded with a DHCP <b>Offer</b>, suggesting an available IP address.
-   - The Windows VM sent a <b>request</b>, requesting to use the offered IP address.
-   - Finally the DHCP server sends an <b>acknowledgment</b> message to confirm and finalize the IP address assignment.  
+   - The Windows VM sent a <b>Request</b>, requesting to use the offered IP address.
+   - Finally the DHCP server sends an <b>Acknowledgment</b> message to confirm and finalize the IP address assignment.  
 <h2>Observe DNS Traffic</h2>
 <h2>Observe RDP Traffic</h2>
 <h2>Delete Resource Group</h2>
