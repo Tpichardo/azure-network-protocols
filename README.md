@@ -46,6 +46,7 @@ Create two virtual machines on the same virtual network. One will use a Windows 
 5. Once connected, open the browser within your Windows VM to download and install [Wireshark](https://www.wireshark.org/). Choose the <b>Windows x64 Installer</b>.
 
 <h2>Observe ICMP Traffic</h2>
+Ping the Linux VM:
 
 1. In Wireshark, select <b>ethernet</b> and then select the blue shark fin on the top left corner of the window to begin viewing the network traffic
 2. Type `icmp` on the bar at the top to filter for ICMP traffic only. ICMP, or Internet Control Message Protocol operates on layer 3 of the OSI model and is used to relay information about network issues. Ping is a tool that uses ICMP to test connectivity between two devices by sending an echo request and waiting for an echo reply. It's like one computer asks "Hey, are you there?" and the other responds with "Yes, I'm here."
@@ -53,7 +54,7 @@ Create two virtual machines on the same virtual network. One will use a Windows 
 4. Now we can see the packets that were sent across the network when we pinged the Linux PC and idividually examine each one
 
 <h2>Experiment with Network Security Groups</h2>
-Pertually ping the Linux VM, and use NSGs to deny ICMP traffic to the Linux VM
+Pertually ping the Linux VM, and use NSGs to deny ICMP traffic to the Linux VM:
 
 1. Let's perpetually ping the Linux VM with `ping 10.0.0.5 -t`. This will send a continuous ping to the Linux VM until we decide to stop it.
 2. In your Azure portal, go to the Linux VM's network security group, and set a rule to deny ICMP traffic. Once this is done, our echo request will begin to time out as we will stop receiving echo replies from the Linux VM. You can also see this by observing the ICMP traffic on Wireshark. Notice that there are no longer any replies from the Linux VM, only requests.
@@ -61,7 +62,7 @@ Pertually ping the Linux VM, and use NSGs to deny ICMP traffic to the Linux VM
 4. Stop the perpetual pings with <b>CTRL + C</b>
 
 <h2>Observe SSH Traffic</h2>
-Establish a secure remote connection to our Linux VM using our Windows VM to log in through SSH
+Establish a secure remote connection to the Linux VM using the Windows VM to log in through SSH:
 
 1. Filter for SSH traffic in Wireshark. SSH or Secure Shell is a network protocol that allows users to securely access a computer over an unsecured network
 2. In PowerShell, type `ssh <username>@<private IP>` to connect. For example, I would type: `ssh labuser@10.0.0.5`. We can see that Wireshark immediately starts to display SSH traffic.
@@ -70,6 +71,10 @@ Establish a secure remote connection to our Linux VM using our Windows VM to log
 5. To exit the SSH connection just type `exit`. Notice how our command prompt has changed, and typing `hostname` now returns the name of our Windows VM.
 
 <h2>Observe DHCP Traffic</h2>
+Release our Windows VM's IP address and request a new one from the DHCP server:
+
+1. Filter for DHCP traffic on Wireshark. DHCP, or Dynamic Host Configuration Protocol is used to automatically assign IP addresses to devices connected to the network.
+2. 
 <h2>Observe DNS Traffic</h2>
 <h2>Observe RDP Traffic</h2>
 <h2>Delete Resource Group</h2>
