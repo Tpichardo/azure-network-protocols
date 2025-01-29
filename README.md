@@ -92,7 +92,7 @@ Use the Windows VM to establish a secure remote connection to the Linux VM throu
 Release our Windows VM's IP address and request a new one from the DHCP server:
 
 1. Filter for DHCP traffic on Wireshark. DHCP or Dynamic Host Configuration Protocol is used to automatically assign IP addresses to devices connected to the network.
-2. Create a <b>.bat</b> file within the Windows VM to execute multiple commands in a sequence. The file will contain the following commands: `ipconfig /release` and `ipconfig / renew`. The first command will release our IP address, causing us to temporarily loose connection to our VM. The second command will then run, allowing our Windows VM to get an IP address and reestablish our connection to our Windows VM.
+2. Create a <b>.bat</b> file within the Windows VM to execute multiple commands in a sequence. The file will contain the following commands: `ipconfig /release` and `ipconfig /renew`. The first command will release our IP address, causing us to temporarily loose connection to our VM. The second command will then run, allowing our Windows VM to get an IP address and reestablish our connection to our Windows VM.
 3. Observe the DHCP traffic on Wireshark.
    - We can see the <b>release</b> of our IP address occured.
    - Then the Windows VM sent a DHCP <b>Discover</b> Message looking for a DHCP server.
