@@ -111,8 +111,9 @@ Request the IP address for popular sites
 
 1. Filter for DNS traffic on Wireshark. DNS or Domain Name Server is used to map human readable domain names to IP addresses.
 2. Lets request Google's IP address! In PowerShell type `nslookup google.com`. This will return Google's IP address.
-3. Use this IP address to access google via your browser. For security purposes, you won't be able to successfully do this for every website you try to access with the IP address.
-4. Feel free to request the IP addredd for any other site you're interested in by following the command `nslookup <websitename>`
+      <img src="https://i.imgur.com/A74kqYH.png" height="80%" width="80%" alt=""/>
+3. Use this IP address to access google via your browser. For security purposes, you won't be able to successfully do this with every website you try to access with the IP address.
+4. Feel free to request the IP addredd for any other site you're interested in with: `nslookup <websitename>`
 
 <h2>Observe RDP Traffic</h2>
 
