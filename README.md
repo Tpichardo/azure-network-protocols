@@ -2,8 +2,6 @@
 <img src="https://i.imgur.com/Ua7udoS.png" alt="Traffic Examination"/>
 </p>
 <h1>Network Security Groups (NSGs) and Inspecting Traffic Between Azure Virtual Machines</h1>
-<br/>
-
 In this tutorial we will use Wireshark to observe various network traffic between two Azure virtual machines, as well as, experiement with Network Security Groups.
 
 <h2>What Is Wireshark?</h2>
@@ -26,7 +24,7 @@ Network Security Groups are a set of defined rules that control the traffic to a
 - Ubuntu Serve 22.04
 
 <h2>Create Virtual Machines</h2>
-Create two virtual machines on the same virtual network. One will use a Windows 10 image and the other will use an Ubuntu Server 22.04 image. 
+Create two virtual machines on the same virtual network. One will use a Windows 10 image and the other will use an Ubuntu Server 22.04 image:
 
 1. Log in to the Azure portal.
 2. Create a Resource Group to add the virtual machines to. This will help us keep our resources organized.
@@ -51,8 +49,7 @@ Ping the Linux VM:
 1. In Wireshark, select <b>ethernet</b>. Then select the blue shark fin at the top left corner of the window to begin viewing the network traffic.
     <img src="https://i.imgur.com/uuF3IKC.png" height="80%" width="80%" alt=""/>
     <img src="https://i.imgur.com/uOzA5mF.png" height="80%" width="80%" alt=""/> 
-2. Type `icmp` on the bar at the top to filter for ICMP traffic only. ICMP, or Internet Control Message Protocol operates on layer 3 of the OSI model and is used to relay information about network issues. Ping is a tool that uses ICMP to test connectivity between two devices by sending an echo request and waiting for an echo reply. It's like one computer asks "Hey, are you there?" and the other responds with "Yes, I'm here."
-
+2. Type `icmp` on the bar at the top to filter for ICMP traffic only. ICMP, or Internet Control Message Protocol operates on layer 3 of the OSI model and is used to relay information about network issues. Ping is a tool that uses ICMP to test connectivity between two devices by sending an echo request and waiting for an echo reply. It's like one computer asks "Hey, are you there?" and the other responds with "Yes, I'm here."<br> 
     <img src="https://i.imgur.com/5VmhUAp.png" height="80%" width="80%" alt=""/>
 3. Open PowerShell on the Windows VM to ping the linux VM. Let's ping the Linux VM's private IP address instead of the public IP address for improved security and efficiency: `ping 10.0.0.5`.
     <img src="https://i.imgur.com/LBHFZtz.png" height="80%" width="80%" alt=""/>
@@ -62,8 +59,7 @@ Ping the Linux VM:
 Pertually ping the Linux VM, and use NSGs to deny ICMP traffic to the Linux VM:
 
 1. Let's perpetually ping the Linux VM with `ping -t 10.0.0.5`. This will send a continuous ping to the Linux VM until we decide to stop it.
-2. In your Azure portal, go to the Linux VM's network security group, and set a rule to deny ICMP traffic. Once this is done, our echo request will begin to time out as we will stop receiving echo replies from the Linux VM. You can also see this by observing the ICMP traffic on Wireshark.
-
+2. In your Azure portal, go to the Linux VM's network security group, and set a rule to deny ICMP traffic. Once this is done, our echo request will begin to time out as we will stop receiving echo replies from the Linux VM. You can also see this by observing the ICMP traffic on Wireshark.<br>
    <img src="https://i.imgur.com/mOaDU5w.png" height="80%" width="80%" alt=""/>
    <img src="https://i.imgur.com/JfPk36p.png" height="80%" width="80%" alt=""/><br>
    
