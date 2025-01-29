@@ -119,6 +119,7 @@ Request the IP address for popular sites
 
 1. Filter for RDP traffic on Wireshark with `tcp.port == 3389`. RDP or Remote Destop Protocol is used to remotely access a computer. Very similar to SSH, except this time we have a Graphical User Interface (GUI). We are currently using RDP to use our Windows VM.
 2. Notice how the traffic on Wireshark is non-stop because we are currently using RDP.
+    <img src="https://i.imgur.com/r5uy1P0.png" height="80%" width="80%" alt=""/>
 
 <h2>Delete Resource Group</h2>
 Delete your resource group to avoid accruing heavy charges
