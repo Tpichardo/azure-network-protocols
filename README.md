@@ -54,7 +54,7 @@ Ping the Linux VM:
 2. Type `icmp` on the bar at the top to filter for ICMP traffic only. ICMP, or Internet Control Message Protocol operates on layer 3 of the OSI model and is used to relay information about network issues. Ping is a tool that uses ICMP to test connectivity between two devices by sending an echo request and waiting for an echo reply. It's like one computer asks "Hey, are you there?" and the other responds with "Yes, I'm here."
 
     <img src="https://i.imgur.com/5VmhUAp.png" height="80%" width="80%" alt=""/>
-3. Open Power Shell on the Windows VM to ping the linux VM. Let's ping the Linux VM's private IP address instead of the public IP address for improved security and efficiency: `ping 10.0.0.5`.
+3. Open PowerShell on the Windows VM to ping the linux VM. Let's ping the Linux VM's private IP address instead of the public IP address for improved security and efficiency: `ping 10.0.0.5`.
     <img src="https://i.imgur.com/LBHFZtz.png" height="80%" width="80%" alt=""/>
 4. Now we can see the packets that were sent across the network when we pinged the Linux PC and idividually examine each one.
 
@@ -95,10 +95,11 @@ Release our Windows VM's IP address and request a new one from the DHCP server:
 2. Create a <b>.bat</b> file within the Windows VM to execute multiple commands in a sequence. This file will contain the following commands: `ipconfig /release` and `ipconfig /renew`.
    <img src="https://i.imgur.com/xcT0FEe.png" height="80%" width="80%" alt=""/>
    <img src="https://i.imgur.com/g4RKPAb.png" height="80%" width="80%" alt=""/>
-3. The first command will release our IP address, causing us to temporarily loose connection to our Windows VM. The second command will then run, allowing our Windows VM to get an IP address and reestablish our connection.<br>
+3. `cd` into the directory where you saved your <b>.bat</b> file, and run it with `.\<filename>.bat`.
+4. The first command will release our IP address, causing us to temporarily loose connection to our Windows VM. The second command will then run, allowing our Windows VM to get an IP address and reestablish our connection.<br>
    <img src="https://i.imgur.com/vAonM92.png" height="80%" width="80%" alt=""/>
    <img src="https://i.imgur.com/fAEsu7A.png" height="80%" width="80%" alt=""/>
-4. Observe the DHCP traffic on Wireshark.
+5. Observe the DHCP traffic on Wireshark.
    - We can see the <b>release</b> of our IP address occured.
    - Then the Windows VM sent a DHCP <b>Discover</b> Message looking for a DHCP server.
    - The DHCP Server then responded with a DHCP <b>Offer</b>, suggesting an available IP address.
@@ -109,7 +110,7 @@ Release our Windows VM's IP address and request a new one from the DHCP server:
 Request the IP address for popular sites
 
 1. Filter for DNS traffic on Wireshark. DNS or Domain Name Server is used to map human readable domain names to IP addresses.
-2. Lets request Google's IP address! On Power Shell type `nslookup google.com`. This will return Google's IP address.
+2. Lets request Google's IP address! In PowerShell type `nslookup google.com`. This will return Google's IP address.
 3. Use this IP address to access google via your browser. For security purposes, you won't be able to successfully do this for every website you try to access with the IP address.
 4. Feel free to request the IP addredd for any other site you're interested in by following the command `nslookup <websitename>`
 
