@@ -42,10 +42,10 @@
 3. Click on the ellipsis and select <b>connect</b> to connect to the Windows VM.
    
    <img src="https://i.imgur.com/OKSJhL1.png" height="80%" width="80%" alt=""/>
-4. Add the username and password you created when you created your virtual machine in Azure to authenticate yourself.
+4. Add the username and password you created when you created your Virtual Machine in the Azure portal to authenticate.
    
     <img src="https://i.imgur.com/dkhuqJB.png" height="80%" width="80%" alt=""/>
-5. Once connected, open the browser within your Windows VM to download and install [Wireshark](https://www.wireshark.org/). Choose the <b>Windows x64 Installer</b>.
+5. Once connected, open the browser in your Windows VM to download and install [Wireshark](https://www.wireshark.org/). Choose the <b>Windows x64 Installer</b>.
 
 <h2>Observe ICMP Traffic</h2>
 <p>Ping the Linux VM:</p>
