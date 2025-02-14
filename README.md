@@ -124,7 +124,7 @@
    
       <img src="https://i.imgur.com/A74kqYH.png" height="80%" width="80%" alt=""/>
 3. Use this IP address to access google via your browser. For security purposes, you won't be able to successfully do this with every website you try to access with the IP address.
-4. Feel free to request the IP addredd for any other site you're interested in with: `nslookup <websitename>`
+4. Feel free to request the IP address for any other site you're interested in with: `nslookup <websitename>`
 
 <h2>Observe RDP Traffic</h2>
 
