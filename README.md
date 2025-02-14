@@ -129,11 +129,11 @@
 <h2>Observe RDP Traffic</h2>
 
 1. Filter for RDP traffic on Wireshark with `tcp.port == 3389`. RDP or Remote Destop Protocol is used to remotely access a computer. Very similar to SSH, except this time we have a Graphical User Interface (GUI).
-2. Notice how the traffic on Wireshark is non-stop. This is because we are currently using RDP as we are remotely connected to our Windows VM.
+2. Notice how the traffic on Wireshark is non-stop. This is because we are currently using RDP to remotely connect to our Windows VM.
 
     <img src="https://i.imgur.com/r5uy1P0.png" height="80%" width="80%" alt=""/>
 
 <h2>Delete Resource Group</h2>
 <p>Delete your resource group to avoid accruing heavy charges</p>
 
-1. Go into the Azure portal and delete your resource groups. This will in turn delete both the Windows and Linux VM.
+1. Go into the Azure portal and delete your resource groups. This will in turn delete both the Windows and Linux VMs.
