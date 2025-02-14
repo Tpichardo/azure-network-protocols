@@ -24,7 +24,7 @@
 - Ubuntu Serve 22.04
 
 <h2>Create Virtual Machines</h2>
-<p>Create two virtual machines on the same virtual network. One will use a Windows 10 image and the other will use an Ubuntu Server 22.04 image:</p>
+<p>Create two virtual machines on the same virtual network. We will build one of the vms using a Windows 10 image and the other vm will use an Ubuntu Server 22.04 image:</p>
 
 1. Log in to the Azure portal.
 2. Create a Resource Group to add the virtual machines to. This will help us keep our resources organized.
