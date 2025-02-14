@@ -128,8 +128,8 @@
 
 <h2>Observe RDP Traffic</h2>
 
-1. Filter for RDP traffic on Wireshark with `tcp.port == 3389`. RDP or Remote Destop Protocol is used to remotely access a computer. Very similar to SSH, except this time we have a Graphical User Interface (GUI). We are currently using RDP to use our Windows VM.
-2. Notice how the traffic on Wireshark is non-stop. This is because we are currently using RDP as we are using our Windows VM.
+1. Filter for RDP traffic on Wireshark with `tcp.port == 3389`. RDP or Remote Destop Protocol is used to remotely access a computer. Very similar to SSH, except this time we have a Graphical User Interface (GUI).
+2. Notice how the traffic on Wireshark is non-stop. This is because we are currently using RDP as we are remotely connected to our Windows VM.
 
     <img src="https://i.imgur.com/r5uy1P0.png" height="80%" width="80%" alt=""/>
 
