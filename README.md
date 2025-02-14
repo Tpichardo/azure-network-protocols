@@ -33,7 +33,7 @@
 
 <h2>Download and Install Wireshark</h2>
 
-1. Open the Windows App and click on the <b>+</b> at the top right of the window to add a PC.
+1. Open the Windows App and click on the <b>+</b> at the top right of the window. Then select <b>add PC</b>
    
    <img src="https://i.imgur.com/q2CIjtQ.png" height="80%" width="80%" alt="interface for adding a PC on the Windows App"/>
 2. Paste your Windows VM's public IP address for <b>PC name</b>. Feel free to give your VM whatever friendly name you would like. I named mine windows-vm so that I can easily know what operating system is running on the PC. Then click <b>Add</b> to add the VM.
