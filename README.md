@@ -91,7 +91,7 @@
 
     <img src="https://i.imgur.com/7my6yHc.png" height="80%" width="80%" alt=""/>
     
-    We can also verify our connection by typing `hostname` on the command prompt. This should return the name that you gave to your Linux VM when you created it on Azure.<br>
+    We can also verify our connection by typing `hostname` on the command prompt. This should return the name that you gave to your Linux VM when you created it on the Azure portal.<br>
     <img src="https://i.imgur.com/ShhGSkL.png" height="80%" width="80%" alt=""/>
 7. To exit the SSH connection just type `exit`. Notice how our command prompt has changed, and typing `hostname` now returns the name of your Windows VM. <br>
     <img src="https://i.imgur.com/zFElRs0.png" height="80%" width="80%" alt=""/>
