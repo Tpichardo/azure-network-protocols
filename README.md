@@ -71,7 +71,7 @@
    <img src="https://i.imgur.com/mOaDU5w.png" height="80%" width="80%" alt=""/>
    <img src="https://i.imgur.com/JfPk36p.png" height="80%" width="80%" alt=""/><br>
    
-   Notice how there are no longer any replies from the Linux VM, only requests.
+   Notice how there are no longer any replies from the Linux VM, only requests from the Windows VM.
    
    <img src="https://i.imgur.com/gS5yukg.png" height="80%" width="80%" alt=""/>
 4. To allow ICMP traffic, just delete the rule on the NSG and the Linux VM will eventually begin sending echo replies.
