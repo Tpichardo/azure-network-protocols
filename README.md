@@ -60,7 +60,7 @@
 4. Open PowerShell on the Windows VM to ping the linux VM. Let's ping the Linux VM's private IP address instead of the public IP address for improved security and efficiency: `ping 10.0.0.5`.
    
     <img src="https://i.imgur.com/LBHFZtz.png" height="80%" width="80%" alt=""/>
-5. Now we can see the packets that were sent across the network when we pinged the Linux PC and idividually examine each one.
+5. Now we can see and examine the packets that were sent across the network when we pinged the Linux VM.
 
 <h2>Experiment with Network Security Groups</h2>
 <p>Pertually ping the Linux VM, and use NSGs to deny ICMP traffic to the Linux VM:</p>
