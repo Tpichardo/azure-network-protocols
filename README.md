@@ -24,12 +24,12 @@
 - Ubuntu Serve 22.04
 
 <h2>Create Virtual Machines</h2>
-<p>Create two virtual machines on the same virtual network. We will build one of the vms using a Windows 10 image and the other vm will use an Ubuntu Server 22.04 image.</p>
+<p>Create two virtual machines on the same virtual network. We will build one of the VMs using a Windows 10 image and the other VM will use an Ubuntu Server 22.04 image.</p>
 
 1. Log in to the Azure portal.
-2. Create a Resource Group to add the virtual machines to. This will help us keep our resources organized.
-3. Create a Windows 10 virtual machine. Select <b>password</b> for authentication type for both VMs. Save these credentials, as we will use them for authenticating later.
-4. Create a Linux (Ubuntu) virtual machine. Ensure that this VM is on the same virtual network as your Windows VM.
+2. Create a Resource Group to add the Virtual Machines to. This will help us keep our resources organized.
+3. Create a Windows 10 Virtual Machine. Select <b>password</b> for authentication type for both VMs. Save these credentials, as we will use them for authenticating later.
+4. Create a Linux (Ubuntu) Virtual Machine. Ensure that this VM is on the same virtual network as your Windows VM.
 
 <h2>Download and Install Wireshark</h2>
 
